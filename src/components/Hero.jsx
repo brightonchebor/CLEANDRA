@@ -80,68 +80,66 @@ const Hero = () => {
 
             {/* Right content - Image/Visual */}
             <div className="relative">
-              {/* Background decoration */}
-              <div className="absolute inset-0 bg-yellow-600 rounded-3xl transform rotate-3 opacity-10"></div>
-              
-              {/* Main image container */}
-              <div className="relative bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-3xl p-8 text-white">
-                {/* Stats cards */}
-                <div className="grid grid-cols-2 gap-4 mb-8">
-                  <div className="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm">
-                    <div className="text-3xl font-bold mb-2">500+</div>
-                    <div className="text-sm opacity-90">Happy Clients</div>
+              {/* Main hero image */}
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <img 
+                  src="src/assets/vecteezy_a-woman-wearing-gloves-and-an-apron-is-cleaning-a-computer_55822329.jpg"
+                  alt="Professional cleaning team at work"
+                  className="w-full h-96 lg:h-[500px] object-cover"
+                />
+                
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                
+                {/* Floating stats cards */}
+                <div className="absolute top-6 left-6">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                    <div className="text-2xl font-bold text-gray-900">500+</div>
+                    <div className="text-sm text-gray-600">Happy Clients</div>
                   </div>
-                  <div className="bg-white bg-opacity-20 rounded-xl p-6 backdrop-blur-sm">
-                    <div className="text-3xl font-bold mb-2">5+</div>
-                    <div className="text-sm opacity-90">Years Experience</div>
+                </div>
+                
+                <div className="absolute top-6 right-6">
+                  <div className="bg-yellow-600 text-white rounded-xl p-4 shadow-lg">
+                    <div className="text-2xl font-bold">5.0★</div>
+                    <div className="text-sm opacity-90">Rating</div>
                   </div>
                 </div>
 
-                {/* Service highlights */}
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                      <div className="w-6 h-6 bg-white rounded opacity-80"></div>
+                {/* Bottom info card */}
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-lg font-bold text-gray-900">Why Choose Us?</h3>
+                      <div className="w-8 h-8 bg-yellow-600 rounded-full flex items-center justify-center">
+                        <CheckCircle className="h-5 w-5 text-white" />
+                      </div>
                     </div>
-                    <div>
-                      <div className="font-semibold">Same Day Service</div>
-                      <div className="text-sm opacity-80">Available for urgent requests</div>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-yellow-600 rounded-full"></div>
+                        <span className="text-gray-700">Eco-friendly</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-yellow-600 rounded-full"></div>
+                        <span className="text-gray-700">Insured Team</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-yellow-600 rounded-full"></div>
+                        <span className="text-gray-700">24/7 Support</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-yellow-600 rounded-full"></div>
+                        <span className="text-gray-700">Money Back</span>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                      <div className="w-6 h-6 bg-white rounded opacity-80"></div>
-                    </div>
-                    <div>
-                      <div className="font-semibold">Trained Professionals</div>
-                      <div className="text-sm opacity-80">Background-checked staff</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
-                      <div className="w-6 h-6 bg-white rounded opacity-80"></div>
-                    </div>
-                    <div>
-                      <div className="font-semibold">Quality Guarantee</div>
-                      <div className="text-sm opacity-80">We stand behind our work</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bottom accent */}
-                <div className="mt-8 pt-6 border-t border-white border-opacity-20">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold">Get Started Today!</div>
-                    <div className="text-sm opacity-90 mt-1">Professional cleaning at your fingertips</div>
                   </div>
                 </div>
               </div>
 
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-yellow-200 rounded-full opacity-80 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-yellow-300 rounded-full opacity-60 animate-pulse delay-75"></div>
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -left-4 w-24 h-24 bg-yellow-200 rounded-full opacity-20 blur-xl"></div>
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-yellow-300 rounded-full opacity-15 blur-xl"></div>
             </div>
           </div>
         </div>

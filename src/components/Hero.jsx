@@ -57,7 +57,7 @@ const Hero = () => {
               {/* CTA buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-yellow-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-700 transition-colors flex items-center justify-center space-x-2 shadow-lg">
-                  <span>Get Free Quote</span>
+                  <span>View Our Services</span>
                   <ArrowRight className="h-5 w-5" />
                 </button>
                 <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg hover:border-yellow-600 hover:text-yellow-600 transition-colors flex items-center justify-center space-x-2">

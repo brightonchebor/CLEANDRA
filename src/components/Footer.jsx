@@ -6,16 +6,18 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main footer content */}
-        <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company info */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-yellow-600 rounded-lg flex items-center justify-center">
-                <div className="w-6 h-6 bg-white rounded-full opacity-20"></div>
-              </div>
+              <img
+                src="/src/assets/logo2.png"
+                alt="Cleandra Solutions Logo"
+                className="w-15 h-15 object-contain"
+              />
               <div>
-                <h3 className="text-xl font-bold">Cleandra</h3>
-                <p className="text-sm text-yellow-400 font-medium">Solutions</p>
+                <h1 className="text-2xl font-bold text-white">Cleandra</h1>
+                <p className="text-sm text-yellow-600 font-medium">Solutions</p>
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -81,16 +83,16 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-yellow-400 mt-1 flex-shrink-0" />
                 <span className="text-gray-300">
-                  Kilifi, Kilifi County, Kenya
+                  Nakuru, Kenya
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-yellow-400 flex-shrink-0" />
-                <span className="text-gray-300">+254 123 456 789</span>
+                <span className="text-gray-300">+254 792 278719</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-yellow-400 flex-shrink-0" />
-                <span className="text-gray-300">info@cleandrasolutions.com</span>
+                <span className="text-gray-300">info.cleandrasolutions@gmail.com</span>
               </li>
               <li className="flex items-start space-x-3">
                 <Clock className="h-5 w-5 text-yellow-400 mt-1 flex-shrink-0" />
@@ -142,7 +144,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-800 py-4 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
             © 2025 Cleandra Solutions. All rights reserved.
           </p>

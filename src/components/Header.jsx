@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,7 +46,7 @@ const Header = () => {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center space-x-8">
-                        <a href="#home" className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
+                        {/* <a href="#home" className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
                             Home
                         </a>
                         <a href="#services" className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
@@ -56,12 +57,26 @@ const Header = () => {
                         </a>
                         <a href="#contact" className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
                             Contact
-                        </a>
+                        </a> */}
+
+                        <Link to='/' className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
+                                    Home
+                        </Link>
+                        <Link to='/services' className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
+                                    Services
+                        </Link>
+                        <Link to='/about-us' className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
+                                    About Us
+                        </Link>
+                        <Link to='/contact' className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
+                                    Contact
+                        </Link>
+
                         <button className="bg-yellow-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-yellow-700 transition-colors">
                             Get Quote
                         </button>
                     </nav>
-
+                    
                     {/* Mobile menu button */}
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}

@@ -68,7 +68,7 @@ const Hero = () => {
 
               {/* Trust indicators */}
               <div className="mt-12 pt-8 border-t border-gray-300">
-                <p className="text-sm text-gray-500 mb-4">Trusted by leading businesses in Kenya</p>
+                <p className="text-sm text-gray-600 mb-4">Trusted by leading businesses in Kenya</p>
                 <div className="flex items-center space-x-8 opacity-60">
                   <div className="text-gray-500 font-bold">HOTELS</div>
                   <div className="text-gray-500 font-bold">OFFICES</div>

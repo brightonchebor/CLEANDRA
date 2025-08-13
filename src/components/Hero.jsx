@@ -31,7 +31,7 @@ const Hero = () => {
               {/* Subheading */}
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Transform your space with Kenya's most trusted cleaning service. 
-                We deliver spotless results for homes and businesses across Kilifi County.
+                We deliver spotless results for homes and businesses across the country.
               </p>
 
               {/* Benefits list */}
@@ -67,13 +67,13 @@ const Hero = () => {
               </div>
 
               {/* Trust indicators */}
-              <div className="mt-12 pt-8 border-t border-gray-200">
+              <div className="mt-12 pt-8 border-t border-gray-300">
                 <p className="text-sm text-gray-500 mb-4">Trusted by leading businesses in Kenya</p>
                 <div className="flex items-center space-x-8 opacity-60">
-                  <div className="text-gray-400 font-bold">HOTELS</div>
-                  <div className="text-gray-400 font-bold">OFFICES</div>
-                  <div className="text-gray-400 font-bold">HOMES</div>
-                  <div className="text-gray-400 font-bold">RETAIL</div>
+                  <div className="text-gray-500 font-bold">HOTELS</div>
+                  <div className="text-gray-500 font-bold">OFFICES</div>
+                  <div className="text-gray-500 font-bold">HOMES</div>
+                  <div className="text-gray-500 font-bold">RETAIL</div>
                 </div>
               </div>
             </div>

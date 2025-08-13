@@ -41,7 +41,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-yellow-400">Our Services</h4>
+            <h4 className="text-lg font-semibold mb-3 text-yellow-400">Our Services</h4>
             <ul className="space-y-3">
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
@@ -78,7 +78,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-yellow-400">Contact Info</h4>
+            <h4 className="text-lg font-semibold mb-3 text-yellow-400">Contact Info</h4>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-yellow-400 mt-1 flex-shrink-0" />
@@ -107,7 +107,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-yellow-400">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-3 text-yellow-400">Quick Links</h4>
             <ul className="space-y-3">
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">

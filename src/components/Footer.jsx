@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import logo from "../assets/logo2.png"
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3 mb-6">
               <img
-                src="/src/assets/logo2.png"
+                src={logo}
                 alt="Cleandra Solutions Logo"
                 className="w-15 h-15 object-contain"
               />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Star, ArrowRight, Phone } from 'lucide-react';
+import { CheckCircle, Star, ArrowRight, Calculator } from 'lucide-react';
 import woman from '../assets/woman.jpg'
 
 const Hero = () => {
@@ -31,7 +31,7 @@ const Hero = () => {
 
               {/* Subheading */}
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Transform your space with Kenya's most trusted cleaning service. 
+                Transform your space with Kenya's most trusted cleaning service.
                 We deliver spotless results for homes and businesses across the country.
               </p>
 
@@ -62,8 +62,8 @@ const Hero = () => {
                   <ArrowRight className="h-5 w-5" />
                 </button>
                 <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg hover:border-yellow-600 hover:text-yellow-600 transition-colors flex items-center justify-center space-x-2">
-                  <Phone className="h-5 w-5" />
-                  <span>Call Now</span>
+                  <Calculator className="h-5 w-5" />
+                  <span>See Pricing</span>
                 </button>
               </div>
 
@@ -83,15 +83,15 @@ const Hero = () => {
             <div className="relative">
               {/* Main hero image */}
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img 
+                <img
                   src={woman}
                   alt="Professional cleaning team at work"
                   className="w-full h-96 lg:h-[500px] object-cover"
                 />
-                
+
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                
+
                 {/* Floating stats cards */}
                 <div className="absolute top-6 left-6">
                   <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
@@ -99,7 +99,7 @@ const Hero = () => {
                     <div className="text-sm text-gray-600">Happy Clients</div>
                   </div>
                 </div>
-                
+
                 <div className="absolute top-6 right-6">
                   <div className="bg-yellow-600 text-white rounded-xl p-4 shadow-lg">
                     <div className="text-2xl font-bold">5.0★</div>

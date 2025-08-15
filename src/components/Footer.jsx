@@ -79,32 +79,32 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-yellow-400">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/about-us" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/about-us" className="text-gray-300 hover:text-white transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/pricing" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                   Pricing
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/book" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/book" className="text-gray-300 hover:text-white transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                   Book
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <a href="#" className="text-gray-300 hover:text-white transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                   Terms of Service
                 </a>
               </li>

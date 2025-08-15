@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircle, Star, ArrowRight, Phone } from 'lucide-react';
+import woman from '../assets/woman.jpg'
 
 const Hero = () => {
   return (
@@ -83,7 +84,7 @@ const Hero = () => {
               {/* Main hero image */}
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img 
-                  src="src/assets/vecteezy_a-woman-wearing-gloves-and-an-apron-is-cleaning-a-computer_55822329.jpg"
+                  src={woman}
                   alt="Professional cleaning team at work"
                   className="w-full h-96 lg:h-[500px] object-cover"
                 />

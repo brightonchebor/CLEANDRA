@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import logo from "../assets/logo2.png"
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,7 +35,7 @@ const Header = () => {
                     {/* Logo */}
                     <div className="flex items-center space-x-3">
                         <img
-                            src="/src/assets/logo2.png"
+                            src={logo}
                             alt="Cleandra Solutions Logo"
                             className="w-15 h-15 object-contain"
                         />

@@ -10,18 +10,7 @@ const Hero = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left content */}
             <div>
-              {/* Trust badges */}
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="flex items-center space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 text-yellow-500 fill-current" />
-                  ))}
-                </div>
-                <span className="text-sm text-gray-600 font-medium">
-                  5.0 rating from 200+ happy customers
-                </span>
-              </div>
-
+            
               {/* Main headline */}
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
                 <span className="block">Professional</span>
@@ -91,21 +80,6 @@ const Hero = () => {
 
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-
-                {/* Floating stats cards */}
-                <div className="absolute top-6 left-6">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
-                    <div className="text-2xl font-bold text-gray-900">500+</div>
-                    <div className="text-sm text-gray-600">Happy Clients</div>
-                  </div>
-                </div>
-
-                <div className="absolute top-6 right-6">
-                  <div className="bg-yellow-600 text-white rounded-xl p-4 shadow-lg">
-                    <div className="text-2xl font-bold">5.0★</div>
-                    <div className="text-sm opacity-90">Rating</div>
-                  </div>
-                </div>
 
                 {/* Bottom info card */}
                 <div className="absolute bottom-6 left-6 right-6">

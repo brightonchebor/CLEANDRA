@@ -1,18 +1,30 @@
 import React, { useState } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Menu, X, Phone, Mail, Calendar } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import logo from "../assets/logo2.png"
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const location = useLocation();
+
+    const navigation = [
+        { name: 'Home', href: '/', current: location.pathname === '/' },
+        { name: 'About Us', href: '/about-us', current: location.pathname === '/about-us' },
+        { name: 'Services', href: '/services', current: location.pathname === '/services' },
+        { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
+        { name: 'Book', href: '/book', current: location.pathname === '/book' },
+        { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' },
+    ];
+
     return (
-        <header className="bg-white shadow-sm">
+        <header className="bg-gray-100 shadow-sm">
             {/* Top contact bar */}
             <div className="bg-yellow-600 text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center py-2 text-sm">
-                        <div className="flex items-center space-x-6">
+                        {/* Desktop layout */}
+                        <div className="hidden sm:flex items-center space-x-6">
                             <div className="flex items-center space-x-2">
                                 <Phone className="h-4 w-4" />
                                 <span>+254 792 278719</span>
@@ -22,6 +34,17 @@ const Header = () => {
                                 <span>info.cleandrasolutions@gmail.com</span>
                             </div>
                         </div>
+
+                        {/* Mobile layout - Phone left, Email right */}
+                        <div className="flex sm:hidden items-center space-x-2">
+                            <Phone className="h-4 w-4" />
+                            <span>+254 792 278719</span>
+                        </div>
+                        <div className="flex sm:hidden items-center space-x-2">
+                            <Mail className="h-4 w-4" />
+                            <span>info.cleandrasolutions@gmail.com</span>
+                        </div>
+
                         <div className="hidden md:block">
                             <span>Professional Cleaning Services in Kenya</span>
                         </div>
@@ -47,37 +70,31 @@ const Header = () => {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center space-x-8">
-                        {/* <a href="#home" className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
-                            Home
-                        </a>
-                        <a href="#services" className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
-                            Services
-                        </a>
-                        <a href="#about" className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
-                            About Us
-                        </a>
-                        <a href="#contact" className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
-                            Contact
-                        </a> */}
 
-                        <Link to='/' className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
-                                    Home
-                        </Link>
-                        <Link to='/services' className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
-                                    Services
-                        </Link>
-                        <Link to='/about-us' className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
-                                    About Us
-                        </Link>
-                        <Link to='/contact' className="text-gray-700 hover:text-yellow-600 font-medium transition-colors">
-                                    Contact
-                        </Link>
+                        <div className="hidden md:block">
+                            <div className="ml-10 flex items-baseline space-x-8">
+                                {navigation.filter(item => item.name !== 'Book').map((item) => (
+                                    <div key={item.name} className="relative">
+                                        <Link
+                                            to={item.href}
+                                            className={`${item.current
+                                                ? 'text-yellow-600 border-b-2 border-yellow-500'
+                                                : 'text-gray-700 hover:text-yellow-600 hover:bg-yellow-50'
+                                                } px-3 py-2 text-sm font-medium transition-all duration-300 ease-in-out`}
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
 
-                        <button className="bg-yellow-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-yellow-700 transition-colors">
-                            Get Quote
+                        <button className="bg-yellow-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-yellow-700 transition-colors flex items-center gap-2">
+                            <Calendar size={20} />
+                            Book Now
                         </button>
                     </nav>
-                    
+
                     {/* Mobile menu button */}
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -91,20 +108,22 @@ const Header = () => {
                 {isMenuOpen && (
                     <div className="md:hidden border-t border-gray-200 py-4">
                         <nav className="flex flex-col space-y-4">
-                            <a href="#home" className="text-gray-700 hover:text-yellow-600 font-medium px-2 py-1">
-                                Home
-                            </a>
-                            <a href="#services" className="text-gray-700 hover:text-yellow-600 font-medium px-2 py-1">
-                                Services
-                            </a>
-                            <a href="#about" className="text-gray-700 hover:text-yellow-600 font-medium px-2 py-1">
-                                About Us
-                            </a>
-                            <a href="#contact" className="text-gray-700 hover:text-yellow-600 font-medium px-2 py-1">
-                                Contact
-                            </a>
-                            <button className="bg-yellow-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-yellow-700 transition-colors mx-2 mt-4">
-                                Get Quote
+                            {navigation.filter(item => item.name !== 'Book').map((item) => (
+                                <div key={item.name} className="relative">
+                                    <Link
+                                        to={item.href}
+                                        className={`${item.current
+                                            ? 'text-yellow-600 border-b-2 border-yellow-500'
+                                            : 'text-gray-700 hover:text-yellow-600 hover:bg-yellow-50'
+                                            } px-3 py-2 text-sm font-medium transition-all duration-300 ease-in-out`}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                </div>
+                            ))}
+                            <button className="bg-yellow-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-yellow-700 transition-colors mx-2 mt-4 flex items-center justify-center gap-2">
+                                <Calendar size={20} />
+                                Book Now
                             </button>
                         </nav>
                     </div>

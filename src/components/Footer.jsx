@@ -12,14 +12,14 @@ const Footer = () => {
           {/* Company info */}
           <div className="lg:pr-4">
             <div className="flex items-center space-x-3 mb-6">
-              <Link to='/'>
+              <Link to='/' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <img
                   src={logo}
                   alt="Cleandra Solutions Logo"
                   className="w-15 h-15 object-contain"
                 />
               </Link>
-              <Link to='/'>
+              <Link to='/' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <div>
                   <h1 className="text-2xl font-bold text-white">Cleandra</h1>
                   <p className="text-sm text-yellow-600 font-medium">Solutions</p>

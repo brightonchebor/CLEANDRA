@@ -1,6 +1,7 @@
 import React from 'react';
-import { CheckCircle, Star, ArrowRight, Calculator } from 'lucide-react';
+import { CheckCircle, Star, ArrowRight, Calendar, Phone } from 'lucide-react';
 import woman from '../assets/woman.jpg'
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left content */}
             <div>
-            
+
               {/* Main headline */}
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
                 <span className="block">Professional</span>
@@ -46,14 +47,18 @@ const Hero = () => {
 
               {/* CTA buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-yellow-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-700 transition-colors flex items-center justify-center space-x-2 shadow-lg">
-                  <span>View Our Services</span>
-                  <ArrowRight className="h-5 w-5" />
-                </button>
-                <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg hover:border-yellow-600 hover:text-yellow-600 transition-colors flex items-center justify-center space-x-2">
-                  <Calculator className="h-5 w-5" />
-                  <span>See Pricing</span>
-                </button>
+                <Link to='/services'>
+                  <button className="bg-yellow-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-700 transition-colors flex items-center justify-center space-x-2 shadow-lg cursor-pointer">
+                    <span>View Our Services</span>
+                    <ArrowRight className="h-5 w-5" />
+                  </button>
+                </Link>
+                <Link to='/book'>
+                  <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg hover:border-yellow-600 hover:text-yellow-600 transition-colors flex items-center justify-center space-x-2 cursor-pointer">
+                    <Calendar className="h-5 w-5" />
+                    <span>Book Now</span>
+                  </button>
+                </Link>
               </div>
 
               {/* Trust indicators */}

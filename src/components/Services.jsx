@@ -54,7 +54,7 @@ const Services = () => {
                 {/* Section Header */}
                 <div className="text-center mb-16">
 
-                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-4xl lg:text-4xl font-bold text-gray-900 mb-4">
                         Our <span className="text-yellow-600">Professional</span> Services
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -100,35 +100,8 @@ const Services = () => {
                     ))}
                 </div>
 
-                {/* Stats Section */}
-                <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-3xl p-8 lg:p-12 mb-12">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                        <div className="text-white">
-                            <div className="flex items-center justify-center mb-4">
-                                <Clock className="h-8 w-8 text-yellow-400" />
-                            </div>
-                            <div className="text-3xl font-bold mb-2">500+</div>
-                            <div className="text-gray-300">Properties Cleaned</div>
-                        </div>
-                        <div className="text-white">
-                            <div className="flex items-center justify-center mb-4">
-                                <Shield className="h-8 w-8 text-yellow-400" />
-                            </div>
-                            <div className="text-3xl font-bold mb-2">100%</div>
-                            <div className="text-gray-300">Satisfaction Rate</div>
-                        </div>
-                        <div className="text-white">
-                            <div className="flex items-center justify-center mb-4">
-                                <Sparkles className="h-8 w-8 text-yellow-400" />
-                            </div>
-                            <div className="text-3xl font-bold mb-2">24/7</div>
-                            <div className="text-gray-300">Service Availability</div>
-                        </div>
-                    </div>
-                </div>
-
                 {/* CTA Section */}
-                <div className="text-center">
+                <div className="text-center mb-12">
                     <div className="bg-yellow-100 rounded-2xl p-8 lg:p-12 border-2 border-yellow-100">
                         <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
                             Ready for a <span className="text-yellow-600">Spotless</span> Space?
@@ -161,6 +134,36 @@ const Services = () => {
 
                     </div>
                 </div>
+
+                {/* Stats Section */}
+                <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-3xl p-8 lg:p-12 mb-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div className="text-white">
+                            <div className="flex items-center justify-center mb-4">
+                                <Clock className="h-8 w-8 text-yellow-400" />
+                            </div>
+                            <div className="text-3xl font-bold mb-2">500+</div>
+                            <div className="text-gray-300">Properties Cleaned</div>
+                        </div>
+                        <div className="text-white">
+                            <div className="flex items-center justify-center mb-4">
+                                <Shield className="h-8 w-8 text-yellow-400" />
+                            </div>
+                            <div className="text-3xl font-bold mb-2">100%</div>
+                            <div className="text-gray-300">Satisfaction Rate</div>
+                        </div>
+                        <div className="text-white">
+                            <div className="flex items-center justify-center mb-4">
+                                <Sparkles className="h-8 w-8 text-yellow-400" />
+                            </div>
+                            <div className="text-3xl font-bold mb-2">24/7</div>
+                            <div className="text-gray-300">Service Availability</div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
             </div>
         </section>
     );

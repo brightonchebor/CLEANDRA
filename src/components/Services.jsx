@@ -129,7 +129,7 @@ const Services = () => {
 
                 {/* CTA Section */}
                 <div className="text-center">
-                    <div className="bg-yellow-50 rounded-2xl p-8 lg:p-12 border-2 border-yellow-100">
+                    <div className="bg-yellow-100 rounded-2xl p-8 lg:p-12 border-2 border-yellow-100">
                         <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
                             Ready for a <span className="text-yellow-600">Spotless</span> Space?
                         </h3>

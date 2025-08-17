@@ -10,11 +10,11 @@ const Header = () => {
 
     const navigation = [
         { name: 'Home', href: '/', current: location.pathname === '/' },
-        { name: 'About Us', href: '/about-us', current: location.pathname === '/about-us' },
         { name: 'Services', href: '/services', current: location.pathname === '/services' },
+        { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' },
+        { name: 'About Us', href: '/about-us', current: location.pathname === '/about-us' },
         { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
         { name: 'Book', href: '/book', current: location.pathname === '/book' },
-        { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' },
     ];
 
     return (

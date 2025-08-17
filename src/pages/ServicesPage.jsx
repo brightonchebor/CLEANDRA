@@ -213,26 +213,9 @@ const ServicesPage = () => {
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
               Professional <span className="text-yellow-400">Cleaning</span> Services
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto mb-12">
+            <p className="text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto ">
               From post-checkout deep cleaning to specialized commercial services, we deliver exceptional results with eco-friendly products and guaranteed satisfaction across Kenya.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link
-                to="/book"
-                className="bg-yellow-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-yellow-700 transition-all shadow-lg flex items-center space-x-3"
-              >
-                <Calendar className="h-6 w-6" />
-                <span>Book Service Now</span>
-              </Link>
-              <Link
-                to='/contact'
-                className="border-2 border-white/30 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all backdrop-blur-sm flex items-center space-x-3"
-              >
-                <Phone className="h-6 w-6" />
-                <span>Get in Touch</span>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -246,8 +229,8 @@ const ServicesPage = () => {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`flex items-center space-x-3 px-6 py-3 rounded-xl font-medium transition-all ${activeCategory === category.id
-                    ? 'bg-yellow-600 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  ? 'bg-yellow-600 text-white shadow-lg'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
               >
                 <category.icon className="h-5 w-5" />
@@ -333,6 +316,7 @@ const ServicesPage = () => {
                     <Link
                       to="/book"
                       className="bg-yellow-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-yellow-700 transition-colors flex items-center justify-center space-x-2"
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     >
                       <Calendar className="h-5 w-5" />
                       <span>Book This Service</span>
@@ -340,6 +324,7 @@ const ServicesPage = () => {
                     <Link
                       to="/contact"
                       className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-xl font-semibold hover:border-yellow-600 hover:text-yellow-600 transition-colors flex items-center justify-center space-x-2"
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     >
                       <Phone className="h-5 w-5" />
                       <span>Get Quote</span>
@@ -392,10 +377,10 @@ const ServicesPage = () => {
               Join hundreds of satisfied customers across Kenya. Book your professional cleaning service today and experience the Cleandra difference.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-stretch sm:items-center">
               <Link
                 to="/book"
-                className="bg-white text-yellow-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg flex items-center space-x-3"
+                className="w-full sm:w-auto bg-white text-yellow-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg flex items-center justify-center space-x-3"
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 <Calendar className="h-6 w-6" />
@@ -403,7 +388,7 @@ const ServicesPage = () => {
               </Link>
               <Link
                 to="/contact"
-                className="border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-yellow-600 transition-all flex items-center space-x-3"
+                className="w-full sm:w-auto border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-yellow-600 transition-all flex items-center justify-center space-x-3"
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 <Phone className="h-6 w-6" />

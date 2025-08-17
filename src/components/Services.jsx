@@ -49,7 +49,7 @@ const Services = () => {
     ];
 
     return (
-        <section className="py-20 bg-gradient-to-b from-white via-gray-50 to-white">
+        <section id="services" className="py-20 bg-gradient-to-b from-white via-gray-50 to-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-16">
@@ -138,10 +138,10 @@ const Services = () => {
                             Eco-friendly products, insured team, and guaranteed satisfaction.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center">
                             <Link
                                 to="/services"
-                                className="bg-yellow-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-yellow-700 transition-colors flex items-center space-x-3 shadow-lg group"
+                                className="w-full sm:w-auto bg-yellow-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-yellow-700 transition-colors flex items-center justify-center space-x-3 shadow-lg group"
                                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                             >
                                 <span>View All Services</span>
@@ -150,7 +150,7 @@ const Services = () => {
 
                             <Link
                                 to="/book"
-                                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg hover:border-yellow-600 hover:text-yellow-600 transition-colors flex items-center justify-center space-x-2 cursor-pointer"
+                                className="w-full sm:w-auto border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg hover:border-yellow-600 hover:text-yellow-600 transition-colors flex items-center justify-center space-x-2 cursor-pointer"
                                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                             >
                                 <Calendar className="h-5 w-5" />
@@ -158,6 +158,7 @@ const Services = () => {
                             </Link>
 
                         </div>
+
                     </div>
                 </div>
             </div>

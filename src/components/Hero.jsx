@@ -46,18 +46,23 @@ const Hero = () => {
               </div>
 
               {/* CTA buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to='/services'>
-                  <button className="bg-yellow-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-700 transition-colors flex items-center justify-center space-x-2 shadow-lg cursor-pointer">
-                    <span>View Our Services</span>
-                    <ArrowRight className="h-5 w-5" />
-                  </button>
-                </Link>
-                <Link to='/book'>
-                  <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg hover:border-yellow-600 hover:text-yellow-600 transition-colors flex items-center justify-center space-x-2 cursor-pointer">
-                    <Calendar className="h-5 w-5" />
-                    <span>Book Now</span>
-                  </button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center">
+                <button
+                  onClick={() => {
+                    const servicesSection = document.getElementById('services');
+                    servicesSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }}
+                  className="w-full sm:w-auto bg-yellow-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-yellow-700 transition-colors flex items-center justify-center space-x-2"
+                >
+                  <ArrowRight className="h-5 w-5" />
+                  <span>View Our Services</span>
+                </button>
+                <Link
+                  to="/contact"
+                  className="w-full sm:w-auto border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-xl font-semibold hover:border-yellow-600 hover:text-yellow-600 transition-colors flex items-center justify-center space-x-2"
+                >
+                  <Phone className="h-5 w-5" />
+                  <span>Get In Touch</span>
                 </Link>
               </div>
 

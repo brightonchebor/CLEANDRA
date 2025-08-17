@@ -264,7 +264,7 @@ const ServicesPage = () => {
                       </div>
                       <div>
                         <div className="text-white font-semibold text-lg">{service.price}</div>
-                        <div className="text-yellow-400 text-sm">{service.duration}</div>
+                        {/* <div className="text-yellow-400 text-sm">{service.duration}</div> */}
                       </div>
                     </div>
                   </div>

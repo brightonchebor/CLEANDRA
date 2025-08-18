@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {
   Home, Building2, Sparkles, Car, Utensils, Droplets, Wind, Shield,
   Clock, CheckCircle, Star, ArrowRight, Phone, Calendar, Users,
-  Zap, Heart, Leaf, Award, Target, TrendingUp
+  Zap, Heart, Leaf, Award, Target, TrendingUp, Wrench
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -17,89 +17,136 @@ const ServicesPage = () => {
   ];
 
   const detailedServices = [
+    // RESIDENTIAL SERVICES
     {
       category: 'residential',
-      title: "Post-Checkout Deep Cleaning",
-      subtitle: "Complete guest turnover service",
+      title: "Standard Residential Cleaning",
+      subtitle: "Routine home maintenance",
       icon: Home,
-      price: "From KES 2,500",
+      price: "From KSh 2,500",
       duration: "2-4 hours",
-      description: "Comprehensive cleaning service designed for short-term rentals and guest accommodations. We ensure your property is spotless and guest-ready.",
+      description: "Regular home cleaning service that keeps your space fresh and tidy. Perfect for weekly, bi-weekly, or monthly maintenance.",
       features: [
-        "Complete linen change and bed making with hotel-quality standards",
-        "Thorough bathroom sanitization and deep cleaning",
-        "Kitchen appliance cleaning (inside and outside)",
-        "Intensive surface scrubbing and disinfection",
-        "Floor sweeping, mopping with professional equipment",
-        "Comprehensive dusting of all surfaces and furniture",
+        "Thorough dusting of all surfaces and furniture",
+        "Complete bathroom cleaning and sanitization",
+        "Kitchen cleaning including counters and appliances",
+        "Floor sweeping and mopping throughout",
         "Trash removal and fresh liner installation",
-        "Final walkthrough and quality inspection"
+        "Bed making and light organizing",
+        "Mirror and glass surface cleaning",
+        "Final walkthrough and quality check"
       ],
-      highlights: ["Same-day service", "Guest-ready guarantee", "Professional linen service"],
+      pricing: [
+        { size: "1-2 Bedroom", price: "KSh 2,500" },
+        { size: "3-4 Bedroom", price: "KSh 4,500" },
+        { size: "5+ Bedroom", price: "KSh 6,500-8,000" }
+      ],
+      highlights: ["Same-day service", "Flexible scheduling", "Eco-friendly products"],
       image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       category: 'residential',
-      title: "Window & Curtain Cleaning",
-      subtitle: "Crystal clear views",
-      icon: Wind,
-      price: "From KES 1,800",
-      duration: "1-3 hours",
-      description: "Professional window and curtain cleaning service that brings natural light back into your space with streak-free, crystal clear results.",
+      title: "Deep Residential Cleaning",
+      subtitle: "Complete detailed cleaning",
+      icon: Sparkles,
+      price: "From KSh 4,500",
+      duration: "4-8 hours",
+      description: "Comprehensive deep cleaning service that tackles every corner of your home. Perfect for seasonal cleaning, special occasions, or when you need that extra sparkle.",
       features: [
-        "Interior and exterior window cleaning",
-        "Professional curtain deep cleaning and steaming",
-        "Blind cleaning and maintenance",
+        "Inside appliance cleaning (oven, fridge, microwave)",
+        "Grout scrubbing and tile deep cleaning",
+        "Wall washing and baseboard cleaning",
+        "Upholstery spot cleaning and treatment",
+        "Light fixture and ceiling fan cleaning",
+        "Cabinet exterior and interior wiping",
         "Window sill and frame cleaning",
-        "Screen cleaning and repair assessment",
-        "Mirror and glass surface polishing",
-        "UV protection treatment available",
-        "Eco-friendly streak-free cleaning solutions"
+        "Detailed bathroom and kitchen sanitization"
       ],
-      highlights: ["Streak-free guarantee", "UV protection", "Same-week service"],
+      pricing: [
+        { size: "1-2 Bedroom", price: "KSh 4,500" },
+        { size: "3-4 Bedroom", price: "KSh 7,000" },
+        { size: "5+ Bedroom", price: "KSh 10,000-14,000" }
+      ],
+      highlights: ["Most popular service", "Guest-ready guarantee", "Deep sanitization"],
       image: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       category: 'residential',
-      title: "Furniture & Upholstery Care",
-      subtitle: "Extend furniture life",
-      icon: Utensils,
-      price: "From KES 3,200",
-      duration: "2-5 hours",
-      description: "Specialized furniture and upholstery cleaning that removes deep stains, odors, and allergens while protecting and extending the life of your investment.",
+      title: "Window & Glass Cleaning",
+      subtitle: "Crystal clear views",
+      icon: Wind,
+      price: "From KSh 2,000",
+      duration: "1-3 hours",
+      description: "Professional window and glass cleaning service that brings natural light back into your space with streak-free, crystal clear results.",
       features: [
-        "Deep upholstery steam cleaning",
-        "Leather conditioning and protection",
-        "Fabric stain removal and treatment",
-        "Odor elimination and sanitization",
-        "Wood furniture polishing and care",
-        "Cushion cleaning and fluffing",
-        "Fabric protection application",
-        "Color restoration for faded materials"
+        "Interior and exterior window cleaning",
+        "Window sill and frame cleaning",
+        "Screen cleaning and maintenance",
+        "Mirror and glass surface polishing",
+        "Sliding door glass cleaning",
+        "Glass table and furniture cleaning",
+        "Streak-free professional techniques",
+        "Safety equipment for high windows"
       ],
-      highlights: ["Stain removal guarantee", "Fabric protection", "Leather specialists"],
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      pricing: [
+        { size: "Standard Service", price: "From KSh 2,000" }
+      ],
+      highlights: ["Streak-free guarantee", "Interior & exterior", "Safety certified"],
+      image: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+
+    // COMMERCIAL SERVICES
+    {
+      category: 'commercial',
+      title: "One-Time Commercial Cleaning",
+      subtitle: "Professional workspace cleaning",
+      icon: Building2,
+      price: "From KSh 4,500",
+      duration: "3-6 hours",
+      description: "Comprehensive one-time office cleaning service for businesses, shops, Airbnbs, and schools. Perfect for special events or initial cleaning.",
+      features: [
+        "Complete workspace cleaning and sanitization",
+        "Floor sweeping and mopping with professional equipment",
+        "Glass and window cleaning",
+        "Restroom deep cleaning and sanitization",
+        "Desk and office furniture dusting",
+        "Kitchen and break room cleaning",
+        "Waste removal and recycling",
+        "Entrance and reception area cleaning"
+      ],
+      pricing: [
+        { size: "Small Office (≤ 100 m²)", price: "KSh 4,500" },
+        { size: "Medium Office (101-300 m²)", price: "KSh 8,000" },
+        { size: "Large Office (301+ m²)", price: "KSh 12,000-18,000" }
+      ],
+      highlights: ["Same-day service", "Professional equipment", "COVID-19 protocols"],
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       category: 'commercial',
-      title: "Office Deep Cleaning",
-      subtitle: "Professional workspace sanitization",
-      icon: Building2,
-      price: "From KES 5,000",
-      duration: "3-6 hours",
-      description: "Comprehensive office cleaning service that creates a healthy, productive work environment for your team and impresses your clients.",
+      title: "Commercial Recurring Contracts",
+      subtitle: "Ongoing maintenance programs",
+      icon: Calendar,
+      price: "From KSh 15,000/month",
+      duration: "Scheduled visits",
+      description: "Regular commercial cleaning contracts with weekly, bi-weekly, or monthly visits. Consistent maintenance for professional business environments.",
       features: [
-        "Workspace deep cleaning and sanitization",
-        "Conference room and common area cleaning",
-        "Restroom deep cleaning and restocking",
-        "Kitchen and break room maintenance",
-        "Floor care (carpet cleaning, hard floor maintenance)",
-        "Window and glass partition cleaning",
-        "Electronics and equipment dusting",
-        "Waste management and recycling"
+        "Scheduled regular cleaning visits",
+        "Customized cleaning checklist",
+        "Dedicated cleaning team assignment",
+        "Supply and equipment management",
+        "Quality control and supervision",
+        "Emergency cleaning response",
+        "Monthly progress reports",
+        "Cost-effective bulk pricing"
       ],
-      highlights: ["After-hours service", "COVID-19 protocols", "Monthly packages"],
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      pricing: [
+        { size: "Small Office", price: "From KSh 15,000/month" },
+        { size: "Medium Office", price: "From KSh 25,000/month" },
+        { size: "Large Office", price: "From KSh 40,000/month" }
+      ],
+      highlights: ["Best value option", "Dedicated team", "Flexible contracts"],
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       category: 'commercial',
@@ -116,53 +163,170 @@ const ServicesPage = () => {
         "Lobby and reception area care",
         "Swimming pool area cleaning",
         "Event space preparation",
-        "Laundry and linen services",
+        "Laundry coordination services",
         "24/7 emergency cleaning response"
+      ],
+      pricing: [
+        { size: "Contact for quote", price: "Custom pricing" }
       ],
       highlights: ["24/7 availability", "Hospitality trained", "Quality audits"],
       image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+
+    // SPECIALIZED SERVICES
+    {
+      category: 'specialized',
+      title: "Post-Construction Cleanup",
+      subtitle: "Construction dust specialists",
+      icon: Wrench,
+      price: "From KSh 8,000",
+      duration: "6-12 hours",
+      description: "Specialized cleaning for newly constructed or renovated spaces, removing all construction debris, dust, paint stains, and residue safely and efficiently.",
+      features: [
+        "Construction debris and dust removal",
+        "Paint splatter and stain removal",
+        "Window and floor polishing",
+        "Fine dust elimination from all surfaces",
+        "HVAC system cleaning",
+        "Light fixture and electrical cleaning",
+        "Final cleanup and inspection",
+        "Safety protocol compliance"
+      ],
+      pricing: [
+        { size: "Small Property (1-2 BR or ≤ 100 m²)", price: "KSh 8,000-10,000" },
+        { size: "Medium Property (3-4 BR or 101-300 m²)", price: "KSh 12,000-18,000" },
+        { size: "Large Property (5+ BR or 301+ m²)", price: "KSh 20,000-28,000" }
+      ],
+      highlights: ["Safety certified", "Industrial equipment", "Warranty included"],
+      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       category: 'specialized',
       title: "Move-in/Move-out Cleaning",
       subtitle: "Fresh start guarantee",
       icon: Home,
-      price: "From KES 4,500",
+      price: "From KSh 4,500",
       duration: "4-8 hours",
-      description: "Intensive cleaning service for property transitions, ensuring spaces are move-in ready or helping you get your deposit back.",
+      description: "Intensive cleaning service for property transitions, ensuring spaces are move-in ready or helping you get your security deposit back.",
       features: [
         "Complete property deep cleaning",
         "Cabinet and drawer interior cleaning",
         "Appliance deep cleaning (inside and out)",
         "Light fixture and ceiling fan cleaning",
-        "Baseboard and trim cleaning",
+        "Baseboard and trim detailed cleaning",
         "Switch plate and outlet cleaning",
         "Closet and storage area cleaning",
         "Final walk-through inspection"
       ],
+      pricing: [
+        { size: "Based on standard deep cleaning rates", price: "From KSh 4,500" }
+      ],
       highlights: ["Deposit back guarantee", "Same-day service", "Checklist provided"],
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+
+    // ADD-ON SERVICES (can be added to any main service)
+    {
+      category: 'specialized',
+      title: "Sofa & Upholstery Cleaning",
+      subtitle: "Furniture care specialists",
+      icon: Utensils,
+      price: "KSh 1,500 per 3-seater",
+      duration: "1-2 hours per item",
+      description: "Professional upholstery cleaning that removes deep stains, odors, and allergens while protecting and extending the life of your furniture.",
+      features: [
+        "Deep steam cleaning treatment",
+        "Stain removal and spot treatment",
+        "Odor elimination and sanitization",
+        "Fabric protection application",
+        "Color restoration techniques",
+        "Cushion cleaning and fluffing",
+        "Leather conditioning (if applicable)",
+        "Fast-drying professional methods"
+      ],
+      pricing: [
+        { size: "3-seater sofa", price: "KSh 1,500" },
+        { size: "Additional seats", price: "KSh 500 each" }
+      ],
+      highlights: ["Stain removal guarantee", "Fast-drying", "Fabric protection"],
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      category: 'specialized',
+      title: "Carpet Deep Cleaning",
+      subtitle: "Professional carpet care",
+      icon: Zap,
+      price: "KSh 250 per m²",
+      duration: "Varies by area",
+      description: "Professional carpet shampooing and deep cleaning service that removes embedded dirt, stains, and allergens for a fresh, clean carpet.",
+      features: [
+        "Pre-treatment of stains and spots",
+        "Deep extraction cleaning",
+        "Professional shampooing",
+        "Odor removal treatment",
+        "Fast-drying techniques",
+        "Carpet protection application",
+        "Traffic area focus",
+        "Post-cleaning inspection"
+      ],
+      pricing: [
+        { size: "Per square meter", price: "KSh 250" },
+        { size: "Minimum charge", price: "KSh 2,000" }
+      ],
+      highlights: ["Deep extraction", "Odor removal", "Fast-drying"],
       image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       category: 'specialized',
-      title: "Post-Construction Cleanup",
-      subtitle: "Construction dust specialists",
-      icon: Zap,
-      price: "From KES 8,000",
-      duration: "6-12 hours",
-      description: "Specialized cleaning for newly constructed or renovated spaces, removing all construction debris, dust, and residue safely and efficiently.",
+      title: "Mattress Cleaning Service",
+      subtitle: "Healthy sleep environment",
+      icon: Star,
+      price: "From KSh 1,000",
+      duration: "30-45 minutes per mattress",
+      description: "Professional mattress cleaning and sanitization service that removes dust mites, allergens, stains, and odors for better sleep hygiene.",
       features: [
-        "Construction debris removal",
-        "Fine dust elimination",
-        "Paint splatter and residue removal",
-        "Window and glass cleaning",
-        "HVAC system cleaning",
-        "Floor preparation and polishing",
-        "Light fixture installation cleaning",
-        "Final inspection and touch-ups"
+        "Deep steam sanitization",
+        "Dust mite elimination",
+        "Stain and odor removal",
+        "Allergen reduction treatment",
+        "Both sides cleaning",
+        "Fast-drying process",
+        "Fabric protection application",
+        "Health and hygiene focus"
       ],
-      highlights: ["Safety certified", "Industrial equipment", "Warranty included"],
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      pricing: [
+        { size: "Single mattress", price: "KSh 1,000" },
+        { size: "Double/Queen mattress", price: "KSh 1,500" },
+        { size: "King mattress", price: "KSh 2,000" }
+      ],
+      highlights: ["Dust mite removal", "Health focused", "Both sides cleaned"],
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      category: 'specialized',
+      title: "Appliance Interior Cleaning",
+      subtitle: "Deep appliance care",
+      icon: Zap,
+      price: "KSh 1,000 each",
+      duration: "30-60 minutes per appliance",
+      description: "Specialized interior cleaning for refrigerators and ovens, removing grease, food residue, and odors for optimal appliance performance.",
+      features: [
+        "Complete interior deep cleaning",
+        "Grease and residue removal",
+        "Odor elimination treatment",
+        "Sanitization and disinfection",
+        "Shelf and drawer cleaning",
+        "Coil and vent cleaning (fridge)",
+        "Safe cleaning products used",
+        "Performance optimization"
+      ],
+      pricing: [
+        { size: "Refrigerator interior", price: "KSh 1,000" },
+        { size: "Oven interior", price: "KSh 1,000" },
+        { size: "Both appliances", price: "KSh 1,800" }
+      ],
+      highlights: ["Grease removal", "Odor elimination", "Safe products"],
+      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ];
 
@@ -206,15 +370,15 @@ const ServicesPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-20 lg:py-32">
+      <section className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-20 lg:py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
               Professional <span className="text-yellow-400">Cleaning</span> Services
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto ">
-              From post-checkout deep cleaning to specialized commercial services, we deliver exceptional results with eco-friendly products and guaranteed satisfaction across Kenya.
+            <p className="text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto mb-8">
+              From residential deep cleaning to specialized commercial services, we deliver exceptional results with eco-friendly products and guaranteed satisfaction across Kenya.
             </p>
           </div>
         </div>
@@ -233,7 +397,7 @@ const ServicesPage = () => {
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
               >
-                <category.icon className="h-5 w-5" />
+                {/* <category.icon className="h-5 w-5" /> */}
                 <span>{category.name}</span>
               </button>
             ))}
@@ -262,10 +426,10 @@ const ServicesPage = () => {
                       <div className="bg-yellow-600 p-3 rounded-xl">
                         <service.icon className="h-6 w-6 text-white" />
                       </div>
-                      <div>
+                      {/* <div>
                         <div className="text-white font-semibold text-lg">{service.price}</div>
-                        {/* <div className="text-yellow-400 text-sm">{service.duration}</div> */}
-                      </div>
+                        <div className="text-yellow-400 text-sm">{service.duration}</div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -292,12 +456,27 @@ const ServicesPage = () => {
                         </div>
                       ))}
                     </div>
-                    {service.features.length > 6 && (
+                    {/* {service.features.length > 6 && (
                       <button className="text-yellow-600 hover:text-yellow-700 text-sm font-medium mt-4">
                         Show all features (+{service.features.length - 6} more)
                       </button>
-                    )}
+                    )} */}
                   </div>
+
+                  {/* Pricing (if available) */}
+                  {/* {service.pricing && service.pricing.length > 1 && (
+                    <div className="mb-8">
+                      <h4 className="text-xl font-semibold text-gray-900 mb-4">Pricing:</h4>
+                      <div className="bg-gray-50 rounded-lg p-4 space-y-2">
+                        {service.pricing.map((priceItem, idx) => (
+                          <div key={idx} className="flex justify-between items-center">
+                            <span className="text-gray-700">{priceItem.size}</span>
+                            <span className="text-yellow-600 font-semibold">{priceItem.price}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )} */}
 
                   {/* Highlights */}
                   <div className="flex flex-wrap gap-3 mb-8">
@@ -312,54 +491,25 @@ const ServicesPage = () => {
                   </div>
 
                   {/* CTA Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <Link
-                      to="/book"
+                      to="/pricing"
                       className="bg-yellow-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-yellow-700 transition-colors flex items-center justify-center space-x-2"
                       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     >
                       <Calendar className="h-5 w-5" />
-                      <span>Book This Service</span>
+                      <span>View Pricing</span>
                     </Link>
-                    <Link
+                    {/* <Link
                       to="/contact"
                       className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-xl font-semibold hover:border-yellow-600 hover:text-yellow-600 transition-colors flex items-center justify-center space-x-2"
                       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     >
                       <Phone className="h-5 w-5" />
                       <span>Get Quote</span>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose <span className="text-yellow-600">Cleandra Solutions</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're not just another cleaning service. We're your trusted partners in maintaining pristine, healthy spaces.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {whyChooseUs.map((item, index) => (
-              <div
-                key={index}
-                className="text-center p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mb-6">
-                  <item.icon className="h-8 w-8 text-yellow-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>

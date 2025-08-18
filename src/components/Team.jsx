@@ -68,8 +68,7 @@ const Team = () => {
               {/* Member Info */}
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-yellow-600 font-semibold mb-3">{member.position}</p>
-                <p className="text-gray-600 text-sm">{member.currentRole}</p>
+                <p className="text-yellow-600 text-sm">{member.currentRole}</p>
               </div>
             </div>
           ))}

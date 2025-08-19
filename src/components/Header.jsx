@@ -92,11 +92,12 @@ const Header = () => {
                                 ))}
                             </div>
                         </div>
-
-                        <button className="bg-yellow-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-yellow-700 transition-colors flex items-center gap-2">
-                            <Calendar size={20} />
-                            Book Now
-                        </button>
+                        <Link to='book'>
+                            <button className="bg-yellow-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-yellow-700 transition-colors flex items-center gap-2 cursor-pointer">
+                                <Calendar size={20} />
+                                Book Now
+                            </button>
+                        </Link>
                     </nav>
 
                     {/* Mobile menu button */}

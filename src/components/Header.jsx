@@ -117,7 +117,7 @@ const Header = () => {
                         <nav className="flex flex-col space-y-4">
                             {navigation.filter(item => item.name !== 'Book').map((item) => (
                                 <div key={item.name} className="relative">
-                                    {/* Add onClick to close the mobile menu immediately when a link is clicked */}
+                        
                                     <Link
                                         to={item.href}
                                         onClick={() => setIsMenuOpen(false)}

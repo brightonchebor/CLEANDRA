@@ -14,7 +14,7 @@ const TermsOfServicePage = () => {
               Terms of <span className="text-yellow-400">Service</span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto mb-8">
-              Understanding our service terms, policies, and mutual responsibilities 
+              Understanding our service terms, policies, and mutual responsibilities
               for a transparent and professional cleaning experience.
             </p>
           </div>
@@ -24,7 +24,7 @@ const TermsOfServicePage = () => {
       {/* Main Content */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Introduction */}
           <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-gray-100">
             <div className="flex items-center space-x-4 mb-6">
@@ -34,7 +34,7 @@ const TermsOfServicePage = () => {
               <h2 className="text-3xl font-bold text-gray-900">Service Agreement</h2>
             </div>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Welcome to Cleandra Solutions. These terms of service outline the conditions under which 
+              Welcome to Cleandra Solutions. These terms of service outline the conditions under which
               we provide our professional cleaning services. By booking our services, you agree to these terms.
             </p>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
@@ -52,7 +52,7 @@ const TermsOfServicePage = () => {
               </div>
               <h2 className="text-2xl font-bold text-gray-900">Service Provisions</h2>
             </div>
-            
+
             <div className="space-y-6">
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Service Quality</h3>
@@ -100,7 +100,7 @@ const TermsOfServicePage = () => {
               </div>
               <h2 className="text-2xl font-bold text-gray-900">Payment & Pricing</h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Payment Methods</h3>
@@ -119,7 +119,7 @@ const TermsOfServicePage = () => {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Pricing Policy</h3>
                 <ul className="space-y-2">
@@ -148,12 +148,12 @@ const TermsOfServicePage = () => {
               </div>
               <h2 className="text-2xl font-bold text-gray-900">Liability & Insurance</h2>
             </div>
-            
+
             <div className="space-y-6">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-blue-900 mb-3">Our Coverage</h3>
                 <p className="text-blue-800 mb-4">
-                  Cleandra Solutions maintains comprehensive liability insurance covering property damage 
+                  Cleandra Solutions maintains comprehensive liability insurance covering property damage
                   and accidents during service provision.
                 </p>
                 <ul className="space-y-2">
@@ -203,7 +203,7 @@ const TermsOfServicePage = () => {
               </div>
               <h2 className="text-2xl font-bold text-gray-900">Cancellation & Rescheduling</h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Client Cancellation</h3>
@@ -224,7 +224,7 @@ const TermsOfServicePage = () => {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Rescheduling</h3>
                 <ul className="space-y-3">
@@ -253,19 +253,22 @@ const TermsOfServicePage = () => {
             <p className="text-gray-700 mb-6">
               Our team is here to clarify any questions about our service terms and policies.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-stretch sm:items-center">
               <Link
-                to="/contact"
-                className="bg-yellow-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-yellow-700 transition-colors flex items-center space-x-2"
+                to="/book"
+                className="w-full sm:w-auto text-white bg-yellow-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-yellow-700 transition-colors shadow-lg flex items-center justify-center space-x-3"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
-                <Phone className="h-5 w-5" />
+                <Calendar className="h-6 w-6" />
                 <span>Contact Us</span>
               </Link>
               <a
                 href="mailto:info.cleandrasolutions@gmail.com"
-                className="border-2 border-yellow-600 text-yellow-700 px-6 py-3 rounded-xl font-semibold hover:bg-yellow-600 hover:text-white transition-colors flex items-center space-x-2"
+                className="w-full sm:w-auto text-white bg-yellow-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-yellow-700 transition-colors shadow-lg flex items-center justify-center space-x-3"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
-                <Mail className="h-5 w-5" />
+                <Mail className="h-6 w-6" />
                 <span>Email Us</span>
               </a>
             </div>

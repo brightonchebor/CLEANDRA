@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   CheckCircle,
   Home,
@@ -10,9 +10,28 @@ import {
   ArrowRight,
   Star
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const PricingPage = () => {
+  const location = useLocation();
+
+  // Handle hash navigation when component mounts or hash changes
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      // Small delay to ensure the DOM is rendered
+      setTimeout(() => {
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      // If no hash, scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location]);
+
   const residentialServices = [
     {
       title: "Standard Cleaning",
@@ -70,6 +89,14 @@ const PricingPage = () => {
         { size: "Medium Property (3-4 BR or 101-300 m²)", price: "KSh 12,000-18,000" },
         { size: "Large Property (5+ BR or 301+ m²)", price: "KSh 20,000-28,000" }
       ]
+    },
+    {
+      title: "Move-in/Move-out Cleaning",
+      icon: <Home className="h-6 w-6" />,
+      description: "Intensive cleaning for property transitions, ensuring move-in ready or security deposit return",
+      prices: [
+        { size: "Based on deep cleaning rates", price: "From KSh 4,500" }
+      ]
     }
   ];
 
@@ -95,9 +122,7 @@ const PricingPage = () => {
 
       <div className="p-6">
         <div className="flex items-center gap-3 mb-4">
-          {/* <div className="bg-yellow-100 p-2 rounded-lg text-yellow-600">
-            {service.icon}
-          </div> */}
+          <div className="text-yellow-600">{service.icon}</div>
           <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
         </div>
 
@@ -111,11 +136,6 @@ const PricingPage = () => {
             </div>
           ))}
         </div>
-
-        {/* <button className="w-full mt-6 bg-yellow-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-yellow-700 transition-colors flex items-center justify-center gap-2">
-          <Phone className="h-5 w-5" />
-          Get Quote
-        </button> */}
       </div>
     </div>
   );
@@ -131,12 +151,11 @@ const PricingPage = () => {
           <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto text-gray-300">
             No hidden fees, no surprises. Choose the perfect cleaning package for your needs with our competitive rates across Kenya.
           </p>
-
         </div>
       </section>
 
       {/* Residential Services */}
-      <section className="py-16">
+      <section id="residential" className="py-16 scroll-mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -156,7 +175,7 @@ const PricingPage = () => {
       </section>
 
       {/* Commercial Services */}
-      <section className="py-16 bg-white">
+      <section id="commercial" className="py-16 bg-white scroll-mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -176,7 +195,7 @@ const PricingPage = () => {
       </section>
 
       {/* Specialized Services */}
-      <section className="py-16">
+      <section id="specialized" className="py-16 scroll-mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -187,7 +206,7 @@ const PricingPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {specializedServices.map((service, index) => (
               <PricingCard key={index} service={service} category="specialized" />
             ))}
@@ -196,7 +215,7 @@ const PricingPage = () => {
       </section>
 
       {/* Add-On Services */}
-      <section className="py-16 bg-white">
+      <section id="add-ons" className="py-16 bg-white scroll-mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -233,7 +252,6 @@ const PricingPage = () => {
             <p className="text-xl mb-12 text-yellow-100">
               Take the next step today — book your preferred cleaning plan or request a custom quote tailored to your needs. Affordable, transparent, and hassle-free service across Kenya.
             </p>
-
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-stretch sm:items-center">
               <Link

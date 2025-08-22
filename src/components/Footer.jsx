@@ -105,7 +105,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/terms" className="text-gray-300 hover:text-white transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                  Terns of Service
+                  Terms of Service
                 </Link>
               </li>
             </ul>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Home, Building2, Sparkles, Car, Utensils, Droplets, Wind, Shield,
   Clock, CheckCircle, Star, ArrowRight, Phone, Calendar, Users,
@@ -25,6 +25,7 @@ const ServicesPage = () => {
       icon: Home,
       price: "From KSh 2,500",
       duration: "2-4 hours",
+      pricingSection: 'residential',
       description: "Regular home cleaning service that keeps your space fresh and tidy. Perfect for weekly, bi-weekly, or monthly maintenance.",
       features: [
         "Thorough dusting of all surfaces and furniture",
@@ -51,6 +52,7 @@ const ServicesPage = () => {
       icon: Sparkles,
       price: "From KSh 4,500",
       duration: "4-8 hours",
+      pricingSection: 'residential',
       description: "Comprehensive deep cleaning service that tackles every corner of your home. Perfect for seasonal cleaning, special occasions, or when you need that extra sparkle.",
       features: [
         "Inside appliance cleaning (oven, fridge, microwave)",
@@ -77,6 +79,7 @@ const ServicesPage = () => {
       icon: Wind,
       price: "From KSh 2,000",
       duration: "1-3 hours",
+      pricingSection: 'add-ons',
       description: "Professional window and glass cleaning service that brings natural light back into your space with streak-free, crystal clear results.",
       features: [
         "Interior and exterior window cleaning",
@@ -103,6 +106,7 @@ const ServicesPage = () => {
       icon: Building2,
       price: "From KSh 4,500",
       duration: "3-6 hours",
+      pricingSection: 'commercial',
       description: "Comprehensive one-time office cleaning service for businesses, shops, Airbnbs, and schools. Perfect for special events or initial cleaning.",
       features: [
         "Complete workspace cleaning and sanitization",
@@ -129,6 +133,7 @@ const ServicesPage = () => {
       icon: Calendar,
       price: "From KSh 15,000/month",
       duration: "Scheduled visits",
+      pricingSection: 'commercial',
       description: "Regular commercial cleaning contracts with weekly, bi-weekly, or monthly visits. Consistent maintenance for professional business environments.",
       features: [
         "Scheduled regular cleaning visits",
@@ -155,6 +160,7 @@ const ServicesPage = () => {
       icon: Building2,
       price: "Custom pricing",
       duration: "Varies",
+      pricingSection: 'commercial',
       description: "Specialized hospitality cleaning services that maintain the highest standards of cleanliness and guest satisfaction in hotels, B&Bs, and lodges.",
       features: [
         "Guest room turnover cleaning",
@@ -181,6 +187,7 @@ const ServicesPage = () => {
       icon: Wrench,
       price: "From KSh 8,000",
       duration: "6-12 hours",
+      pricingSection: 'specialized',
       description: "Specialized cleaning for newly constructed or renovated spaces, removing all construction debris, dust, paint stains, and residue safely and efficiently.",
       features: [
         "Construction debris and dust removal",
@@ -207,6 +214,7 @@ const ServicesPage = () => {
       icon: Home,
       price: "From KSh 4,500",
       duration: "4-8 hours",
+      pricingSection: 'specialized',
       description: "Intensive cleaning service for property transitions, ensuring spaces are move-in ready or helping you get your security deposit back.",
       features: [
         "Complete property deep cleaning",
@@ -233,6 +241,7 @@ const ServicesPage = () => {
       icon: Utensils,
       price: "KSh 1,500 per 3-seater",
       duration: "1-2 hours per item",
+      pricingSection: 'add-ons',
       description: "Professional upholstery cleaning that removes deep stains, odors, and allergens while protecting and extending the life of your furniture.",
       features: [
         "Deep steam cleaning treatment",
@@ -258,6 +267,7 @@ const ServicesPage = () => {
       icon: Zap,
       price: "KSh 250 per m²",
       duration: "Varies by area",
+      pricingSection: 'add-ons',
       description: "Professional carpet shampooing and deep cleaning service that removes embedded dirt, stains, and allergens for a fresh, clean carpet.",
       features: [
         "Pre-treatment of stains and spots",
@@ -283,6 +293,7 @@ const ServicesPage = () => {
       icon: Star,
       price: "From KSh 1,000",
       duration: "30-45 minutes per mattress",
+      pricingSection: 'add-ons',
       description: "Professional mattress cleaning and sanitization service that removes dust mites, allergens, stains, and odors for better sleep hygiene.",
       features: [
         "Deep steam sanitization",
@@ -309,6 +320,7 @@ const ServicesPage = () => {
       icon: Zap,
       price: "KSh 1,000 each",
       duration: "30-60 minutes per appliance",
+      pricingSection: 'add-ons',
       description: "Specialized interior cleaning for refrigerators and ovens, removing grease, food residue, and odors for optimal appliance performance.",
       features: [
         "Complete interior deep cleaning",
@@ -397,7 +409,6 @@ const ServicesPage = () => {
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
               >
-                {/* <category.icon className="h-5 w-5" /> */}
                 <span>{category.name}</span>
               </button>
             ))}
@@ -426,10 +437,6 @@ const ServicesPage = () => {
                       <div className="bg-yellow-600 p-3 rounded-xl">
                         <service.icon className="h-6 w-6 text-white" />
                       </div>
-                      {/* <div>
-                        <div className="text-white font-semibold text-lg">{service.price}</div>
-                        <div className="text-yellow-400 text-sm">{service.duration}</div>
-                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -456,27 +463,7 @@ const ServicesPage = () => {
                         </div>
                       ))}
                     </div>
-                    {/* {service.features.length > 6 && (
-                      <button className="text-yellow-600 hover:text-yellow-700 text-sm font-medium mt-4">
-                        Show all features (+{service.features.length - 6} more)
-                      </button>
-                    )} */}
                   </div>
-
-                  {/* Pricing (if available) */}
-                  {/* {service.pricing && service.pricing.length > 1 && (
-                    <div className="mb-8">
-                      <h4 className="text-xl font-semibold text-gray-900 mb-4">Pricing:</h4>
-                      <div className="bg-gray-50 rounded-lg p-4 space-y-2">
-                        {service.pricing.map((priceItem, idx) => (
-                          <div key={idx} className="flex justify-between items-center">
-                            <span className="text-gray-700">{priceItem.size}</span>
-                            <span className="text-yellow-600 font-semibold">{priceItem.price}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )} */}
 
                   {/* Highlights */}
                   <div className="flex flex-wrap gap-3 mb-8">
@@ -493,21 +480,12 @@ const ServicesPage = () => {
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <Link
-                      to="/pricing"
+                      to={`/pricing#${service.pricingSection}`}
                       className="bg-yellow-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-yellow-700 transition-colors flex items-center justify-center space-x-2"
-                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     >
                       <Calendar className="h-5 w-5" />
                       <span>View Pricing</span>
                     </Link>
-                    {/* <Link
-                      to="/contact"
-                      className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-xl font-semibold hover:border-yellow-600 hover:text-yellow-600 transition-colors flex items-center justify-center space-x-2"
-                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    >
-                      <Phone className="h-5 w-5" />
-                      <span>Get Quote</span>
-                    </Link> */}
                   </div>
                 </div>
               </div>

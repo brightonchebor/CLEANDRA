@@ -20,6 +20,7 @@ const Header = () => {
         { name: 'About Us', href: '/about-us', current: location.pathname === '/about-us' },
         { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
         { name: 'Book', href: '/book', current: location.pathname === '/book' },
+        { name: 'Terms', href: '/terms', current: location.pathname === '/terms' },
     ];
 
     return (

@@ -7,6 +7,7 @@ import ContactPage from './pages/ContactPage';
 import ServicesPage from './pages/ServicesPage';
 import PricingPage from './pages/PricingPage';
 import BookPage from './pages/BookPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/book" element={<BookPage />} />
+            <Route path="/terms" element={<TermsOfServicePage />} />
           </Routes>
         </main>
         <Footer />

@@ -86,10 +86,9 @@ const TermsOfServicePage = () => {
             <div className="prose prose-gray max-w-none text-gray-700 mb-6">
               <p className="mb-3">Payment for services is accepted through the following approved methods only:</p>
               <ul className="space-y-2 ml-6">
-                <li>• Mobile money transfers (M-Pesa, Airtel Money, T-Kash)</li>
-                <li>• Electronic bank transfers and wire transfers</li>
-                <li>• Business cheques for commercial accounts (subject to clearance)</li>
-                <li>• Digital payment platforms and online payment systems</li>
+                <li>• Mobile money transfers (M-Pesa, Airtel Money)</li>
+                <li>• Bank transfers</li>
+                <li>• Business cheques</li>
               </ul>
               <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mt-4">
                 <p className="text-amber-800 font-medium">

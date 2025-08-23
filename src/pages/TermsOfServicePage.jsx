@@ -247,7 +247,7 @@ const TermsOfServicePage = () => {
             </div>
 
             <div className="mt-6 pt-6 border-t border-yellow-200 text-sm text-gray-600">
-              <p>Document ID: TOS-2025-001 | Last Reviewed: January 2025</p>
+              {/* <p>Document ID: TOS-2025-001 | Last Reviewed: January 2025</p> */}
               <p className="mt-1">© 2025 Cleandra Solutions. All rights reserved.</p>
             </div>
           </div>

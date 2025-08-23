@@ -80,7 +80,7 @@ const Header = () => {
                     <nav className="hidden md:flex items-center space-x-8">
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-8">
-                                {navigation.filter(item => item.name !== 'Book').map((item) => (
+                                {navigation.filter(item => item.name !== 'Book'&& item.name !== 'Terms').map((item) => (
                                     <div key={item.name} className="relative">
                                         <Link
                                             to={item.href}
@@ -116,7 +116,7 @@ const Header = () => {
                 {isMenuOpen && (
                     <div className="md:hidden border-t border-gray-200 py-4">
                         <nav className="flex flex-col space-y-4">
-                            {navigation.filter(item => item.name !== 'Book').map((item) => (
+                            {navigation.filter(item => item.name !== 'Book' && item.name !== 'Terms').map((item) => (
                                 <div key={item.name} className="relative">
                         
                                     <Link

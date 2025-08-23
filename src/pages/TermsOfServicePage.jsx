@@ -1,276 +1,255 @@
 import React from 'react';
-import { Shield, CheckCircle, AlertTriangle, Phone, Mail, Calendar, FileText, Users, Clock } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Shield, CheckCircle, AlertTriangle, Phone, Mail, Calendar, FileText, Users, Clock, CreditCard } from 'lucide-react';
 
 const TermsOfServicePage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-20 lg:py-20">
+      <section className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-16">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               Terms of <span className="text-yellow-400">Service</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto mb-8">
-              Understanding our service terms, policies, and mutual responsibilities
-              for a transparent and professional cleaning experience.
+            <p className="text-lg lg:text-xl text-gray-200 max-w-3xl mx-auto">
+              Professional cleaning service agreement and terms of engagement
             </p>
+            <div className="mt-6 text-sm text-gray-300">
+              Effective Date: January 2025 | Document Version 1.2
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Main Document Content */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          {/* Introduction */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-gray-100">
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="bg-yellow-600 p-3 rounded-full">
-                <FileText className="h-6 w-6 text-white" />
-              </div>
-              <h2 className="text-3xl font-bold text-gray-900">Service Agreement</h2>
-            </div>
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Welcome to Cleandra Solutions. These terms of service outline the conditions under which
-              we provide our professional cleaning services. By booking our services, you agree to these terms.
-            </p>
-            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
-              <p className="text-yellow-800 font-medium">
-                <strong>Last Updated:</strong> January 2025
+          {/* 1. Agreement Overview */}
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-10 mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-3">
+              1. AGREEMENT OVERVIEW
+            </h2>
+            <div className="prose prose-gray max-w-none text-gray-700 leading-relaxed">
+              <p className="mb-4">
+                This Terms of Service Agreement ("Agreement") is entered into between Cleandra Solutions, 
+                a professional cleaning service company ("Company", "we", "us", or "our"), and the individual 
+                or entity engaging our services ("Client", "you", or "your").
+              </p>
+              <p className="mb-4">
+                By booking, scheduling, or utilizing any of our cleaning services, you acknowledge that you 
+                have read, understood, and agree to be bound by all terms and conditions set forth in this Agreement.
+              </p>
+              <p>
+                This Agreement supersedes all prior agreements, understandings, or representations relating 
+                to the subject matter herein and may only be modified in writing by both parties.
               </p>
             </div>
           </div>
 
-          {/* Service Terms */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-gray-100">
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="bg-blue-600 p-3 rounded-full">
-                <Users className="h-6 w-6 text-white" />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900">Service Provisions</h2>
+          {/* 2. Service Specifications */}
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-10 mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-3">
+              2. SERVICE SPECIFICATIONS
+            </h2>
+            
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">2.1 Service Standards</h3>
+            <div className="prose prose-gray max-w-none text-gray-700 mb-6">
+              <p className="mb-3">The Company agrees to provide professional cleaning services subject to the following standards:</p>
+              <ul className="space-y-2 ml-6">
+                <li>• All services performed by trained, insured, and bonded personnel</li>
+                <li>• Exclusive use of professional-grade, eco-friendly cleaning products and equipment</li>
+                <li>• Services delivered in accordance with industry best practices and safety protocols</li>
+                <li>• Quality assurance inspections and client satisfaction guarantee program</li>
+              </ul>
             </div>
 
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Service Quality</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">All services will be performed by trained, insured professionals</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">We guarantee satisfaction with our quality assurance program</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">Only eco-friendly, professional-grade cleaning products will be used</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Scheduling & Access</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start space-x-3">
-                    <Clock className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">Services must be scheduled at least 24 hours in advance</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Clock className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">Client must provide secure access to the premises</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Clock className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">Cancellations must be made at least 4 hours before scheduled time</span>
-                  </li>
-                </ul>
-              </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">2.2 Scheduling Requirements</h3>
+            <div className="prose prose-gray max-w-none text-gray-700">
+              <ul className="space-y-2 ml-6">
+                <li>• Service appointments must be scheduled a minimum of 24 hours in advance</li>
+                <li>• Client must provide secure and reasonable access to the premises during scheduled times</li>
+                <li>• Any special requirements or access instructions must be communicated at time of booking</li>
+                <li>• Company reserves the right to reschedule due to weather, emergency, or safety concerns</li>
+              </ul>
             </div>
           </div>
 
-          {/* Payment Terms */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-gray-100">
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="bg-green-600 p-3 rounded-full">
-                <CheckCircle className="h-6 w-6 text-white" />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900">Payment & Pricing</h2>
-            </div>
+          {/* 3. Payment Terms */}
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-10 mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-3">
+              3. PAYMENT TERMS AND CONDITIONS
+            </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Payment Methods</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-center space-x-3">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span className="text-gray-700">Cash payment upon service completion</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span className="text-gray-700">Mobile money (M-Pesa, Airtel Money)</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span className="text-gray-700">Bank transfer for commercial accounts</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Pricing Policy</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-center space-x-3">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span className="text-gray-700">Fixed pricing based on service type</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span className="text-gray-700">No hidden fees or surprise charges</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span className="text-gray-700">Written quotes provided before service</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Liability & Insurance */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-gray-100">
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="bg-purple-600 p-3 rounded-full">
-                <Shield className="h-6 w-6 text-white" />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900">Liability & Insurance</h2>
-            </div>
-
-            <div className="space-y-6">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-3">Our Coverage</h3>
-                <p className="text-blue-800 mb-4">
-                  Cleandra Solutions maintains comprehensive liability insurance covering property damage
-                  and accidents during service provision.
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">3.1 Accepted Payment Methods</h3>
+            <div className="prose prose-gray max-w-none text-gray-700 mb-6">
+              <p className="mb-3">Payment for services is accepted through the following approved methods only:</p>
+              <ul className="space-y-2 ml-6">
+                <li>• Mobile money transfers (M-Pesa, Airtel Money, T-Kash)</li>
+                <li>• Electronic bank transfers and wire transfers</li>
+                <li>• Business cheques for commercial accounts (subject to clearance)</li>
+                <li>• Digital payment platforms and online payment systems</li>
+              </ul>
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mt-4">
+                <p className="text-amber-800 font-medium">
+                  <strong>Important:</strong> Cash payments are not accepted under any circumstances for security and accountability purposes.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center space-x-3">
-                    <Shield className="h-4 w-4 text-blue-600" />
-                    <span className="text-blue-800">Property damage protection</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <Shield className="h-4 w-4 text-blue-600" />
-                    <span className="text-blue-800">Employee accident coverage</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <Shield className="h-4 w-4 text-blue-600" />
-                    <span className="text-blue-800">Bonded staff for your security</span>
-                  </li>
-                </ul>
               </div>
+            </div>
 
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-amber-900 mb-3 flex items-center space-x-2">
-                  <AlertTriangle className="h-5 w-5" />
-                  <span>Important Limitations</span>
-                </h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start space-x-3">
-                    <AlertTriangle className="h-4 w-4 text-amber-600 mt-1 flex-shrink-0" />
-                    <span className="text-amber-800">Pre-existing damage must be reported before service begins</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <AlertTriangle className="h-4 w-4 text-amber-600 mt-1 flex-shrink-0" />
-                    <span className="text-amber-800">Valuable or fragile items should be secured by client</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <AlertTriangle className="h-4 w-4 text-amber-600 mt-1 flex-shrink-0" />
-                    <span className="text-amber-800">Claims must be reported within 24 hours of service completion</span>
-                  </li>
-                </ul>
-              </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">3.2 Pricing and Payment Schedule</h3>
+            <div className="prose prose-gray max-w-none text-gray-700">
+              <ul className="space-y-2 ml-6">
+                <li>• All pricing is fixed based on service type and property specifications</li>
+                <li>• Written quotations provided prior to service commencement</li>
+                <li>• Payment due upon completion of services unless otherwise arranged</li>
+                <li>• Late payment fees may apply to overdue accounts (2% per month)</li>
+                <li>• No hidden fees, surcharges, or undisclosed costs</li>
+              </ul>
             </div>
           </div>
 
-          {/* Cancellation Policy */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-gray-100">
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="bg-red-600 p-3 rounded-full">
-                <Calendar className="h-6 w-6 text-white" />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900">Cancellation & Rescheduling</h2>
+          {/* 4. Liability and Insurance */}
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-10 mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-3">
+              4. LIABILITY, INSURANCE, AND RISK ALLOCATION
+            </h2>
+
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">4.1 Company Insurance Coverage</h3>
+            <div className="prose prose-gray max-w-none text-gray-700 mb-6">
+              <p className="mb-3">Cleandra Solutions maintains comprehensive insurance coverage including:</p>
+              <ul className="space-y-2 ml-6">
+                <li>• General liability insurance covering property damage and personal injury</li>
+                <li>• Workers' compensation insurance for all employees</li>
+                <li>• Professional indemnity coverage for service-related claims</li>
+                <li>• Bonding and fidelity insurance for employee dishonesty protection</li>
+              </ul>
             </div>
+
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">4.2 Limitation of Liability</h3>
+            <div className="prose prose-gray max-w-none text-gray-700 mb-6">
+              <p className="mb-3">Client acknowledges and agrees to the following liability limitations:</p>
+              <ul className="space-y-2 ml-6">
+                <li>• Pre-existing damage or defects must be disclosed before service commencement</li>
+                <li>• Valuable, fragile, or irreplaceable items should be secured by Client prior to service</li>
+                <li>• Company liability limited to direct damages not exceeding the service fee paid</li>
+                <li>• Claims must be reported in writing within 24 hours of service completion</li>
+                <li>• Company not liable for consequential, indirect, or punitive damages</li>
+              </ul>
+            </div>
+
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">4.3 Client Responsibilities</h3>
+            <div className="prose prose-gray max-w-none text-gray-700">
+              <ul className="space-y-2 ml-6">
+                <li>• Provide safe working conditions and disclose any known hazards</li>
+                <li>• Secure pets and ensure clear access to areas requiring cleaning</li>
+                <li>• Report any concerns or issues promptly during service provision</li>
+                <li>• Maintain adequate homeowner's or business insurance coverage</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* 5. Cancellation Policy */}
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-10 mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-3">
+              5. CANCELLATION AND MODIFICATION POLICY
+            </h2>
+
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">5.1 Client-Initiated Cancellation</h3>
+            <div className="prose prose-gray max-w-none text-gray-700 mb-6">
+              <ul className="space-y-3 ml-6">
+                <li>
+                  <strong>More than 4 hours notice:</strong> No cancellation penalty applied
+                </li>
+                <li>
+                  <strong>Less than 4 hours notice:</strong> Cancellation fee equal to 50% of scheduled service cost
+                </li>
+                <li>
+                  <strong>No-show/Same-day cancellation:</strong> Full service charge may be applied
+                </li>
+                <li>
+                  <strong>Emergency situations:</strong> Evaluated on case-by-case basis with documentation
+                </li>
+              </ul>
+            </div>
+
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">5.2 Rescheduling Policy</h3>
+            <div className="prose prose-gray max-w-none text-gray-700">
+              <ul className="space-y-2 ml-6">
+                <li>• Free rescheduling available with 24+ hours advance notice</li>
+                <li>• One complimentary reschedule per booking; subsequent changes subject to fees</li>
+                <li>• Emergency weather or safety-related postponements exempt from fees</li>
+                <li>• Company-initiated rescheduling does not incur client penalties</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* 6. General Provisions */}
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-10 mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-3">
+              6. GENERAL PROVISIONS
+            </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Client Cancellation</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
-                    <div>
-                      <span className="text-gray-900 font-medium">4+ hours notice:</span>
-                      <p className="text-gray-700 text-sm">No cancellation fee</p>
-                    </div>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <AlertTriangle className="h-5 w-5 text-amber-600 mt-1 flex-shrink-0" />
-                    <div>
-                      <span className="text-gray-900 font-medium">Less than 4 hours:</span>
-                      <p className="text-gray-700 text-sm">50% service charge may apply</p>
-                    </div>
-                  </li>
-                </ul>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">6.1 Governing Law</h3>
+                <p className="text-gray-700 mb-6">
+                  This Agreement shall be governed by and construed in accordance with the laws of Kenya. 
+                  Any disputes arising shall be subject to the jurisdiction of Kenyan courts.
+                </p>
+
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">6.2 Severability</h3>
+                <p className="text-gray-700">
+                  If any provision of this Agreement is deemed invalid or unenforceable, the remaining 
+                  provisions shall continue in full force and effect.
+                </p>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Rescheduling</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
-                    <div>
-                      <span className="text-gray-900 font-medium">Free rescheduling:</span>
-                      <p className="text-gray-700 text-sm">With 24+ hours notice</p>
-                    </div>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
-                    <div>
-                      <span className="text-gray-900 font-medium">Emergency situations:</span>
-                      <p className="text-gray-700 text-sm">Case-by-case consideration</p>
-                    </div>
-                  </li>
-                </ul>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">6.3 Entire Agreement</h3>
+                <p className="text-gray-700 mb-6">
+                  This document constitutes the entire agreement between the parties and supersedes 
+                  all prior negotiations, representations, or agreements.
+                </p>
+
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">6.4 Amendment</h3>
+                <p className="text-gray-700">
+                  This Agreement may only be modified by written consent of both parties. 
+                  Company reserves the right to update terms with 30 days written notice.
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Contact Information */}
-          <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Questions About Our Terms?</h2>
-            <p className="text-gray-700 mb-6">
-              Our team is here to clarify any questions about our service terms and policies.
+          {/* Contact Section */}
+          <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 border border-yellow-200 rounded-lg p-8 text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Legal Questions or Clarifications?</h2>
+            <p className="text-gray-700 mb-6 max-w-3xl mx-auto">
+              For questions regarding these terms of service, contract modifications, or legal clarifications, 
+              please contact our customer service team or legal department.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-stretch sm:items-center">
-              <Link
-                to="/book"
-                className="w-full sm:w-auto text-white bg-yellow-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-yellow-700 transition-colors shadow-lg flex items-center justify-center space-x-3"
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <button
+                onClick={() => window.location.href = '/contact'}
+                className="inline-flex items-center space-x-2 bg-yellow-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors shadow-md"
               >
-                <Calendar className="h-6 w-6" />
-                <span>Contact Us</span>
-              </Link>
+                <Phone className="h-5 w-5" />
+                <span>Contact Legal Team</span>
+              </button>
               <a
-                href="mailto:info.cleandrasolutions@gmail.com"
-                className="w-full sm:w-auto text-white bg-yellow-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-yellow-700 transition-colors shadow-lg flex items-center justify-center space-x-3"
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                href="mailto:legal@cleandrasolutions.com"
+                className="inline-flex items-center space-x-2 bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors shadow-md"
               >
-                <Mail className="h-6 w-6" />
-                <span>Email Us</span>
+                <Mail className="h-5 w-5" />
+                <span>Email Legal Dept</span>
               </a>
+            </div>
+
+            <div className="mt-6 pt-6 border-t border-yellow-200 text-sm text-gray-600">
+              <p>Document ID: TOS-2025-001 | Last Reviewed: January 2025</p>
+              <p className="mt-1">© 2025 Cleandra Solutions. All rights reserved.</p>
             </div>
           </div>
         </div>

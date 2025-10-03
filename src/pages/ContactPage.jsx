@@ -25,13 +25,13 @@ const ContactPage = () => {
       title: "Call Us",
       details: ["+254 792 278719"],
       description: "Available 24/7 for emergencies",
-      action: "tel:+254115081710",
+      action: "tel:+254792278719",
       actionText: "Call Now"
     },
     {
       icon: MessageSquare,
       title: "WhatsApp",
-      details: ["+254 115 081 710"],
+      details: ["+254 792 278719"],
       description: "Instant response via WhatsApp",
       action: "whatsapp",
       actionText: "Chat Now"
@@ -126,7 +126,7 @@ const ContactPage = () => {
       message = encodeURIComponent("👋 Hello! I'm interested in your cleaning services. Could you please provide more information?");
     }
     
-    const whatsappUrl = `https://wa.me/254115081710?text=${message}`;
+    const whatsappUrl = `https://wa.me/254792278719?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -136,7 +136,7 @@ const ContactPage = () => {
     
     // Generate WhatsApp message from form data
     const message = generateWhatsAppMessage();
-    const whatsappUrl = `https://wa.me/254115081710?text=${message}`;
+    const whatsappUrl = `https://wa.me/254792278719?text=${message}`;
     
     // Open WhatsApp
     window.open(whatsappUrl, '_blank');

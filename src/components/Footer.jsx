@@ -30,18 +30,18 @@ const Footer = () => {
               Professional cleaning services across Kenya. We provide reliable, eco-friendly cleaning solutions for homes and businesses.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-yellow-600 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61579609423137" className="bg-gray-800 p-2 rounded-lg hover:bg-yellow-600 transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-yellow-600 transition-colors">
+              {/* <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-yellow-600 transition-colors">
                 <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-yellow-600 transition-colors">
+              </a> */}
+              <a href="https://www.instagram.com/iambrighte" className="bg-gray-800 p-2 rounded-lg hover:bg-yellow-600 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-yellow-600 transition-colors">
+              {/* <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-yellow-600 transition-colors">
                 <Linkedin className="h-5 w-5" />
-              </a>
+              </a> */}
             </div>
           </div>
 
